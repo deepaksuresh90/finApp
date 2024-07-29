@@ -2,22 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {Routers} from './index'
 import reportWebVitals from './reportWebVitals';
 import { store } from '../../store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    { /*Add BrowserRouter if you need to route based on route path*/}
-    {/* 
-    <BrowserRouter basename={baseurl}>
-    <Routes>
-       <Route path="/home" element={<protected><homePage/></protected>}/>
-    </Routes>  
-    </BrowserRouter>*/}
+
+    {/*Add Generic error boundary here to handle global exception */}
 
     <Provider store={store}>
+    <Routers/>
     <div>"hello folks!"</div>
       {/*   Render base component here */}
     </Provider>
