@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 export const homePage_initialState =
 {
-    data: {}
+    data: []
 }
 
 export const homePage_Slice = createSlice({
@@ -19,7 +19,7 @@ export const homePage_Slice = createSlice({
 });
 
 export const {
-    homePageSuccessData
+    homePageSuccessDataLoad
 } = homePage_Slice.reducer;
 
 export const homepageSelector = (state) => state.homePage_data;

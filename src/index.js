@@ -2,21 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { Provider } from 'react-redux';
-import {Routers} from './index'
+import Routers from './Routes'
 import reportWebVitals from './reportWebVitals';
-import { store } from '../../store';
+import  store  from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-
+  <h1>"hello folks!"</h1>
     {/*Add Generic error boundary here to handle global exception */}
 
-    <Provider store={store}>
-    <Routers/>
-    <div>"hello folks!"</div>
+     <Provider store={store}>
+    {/* <Routers/> */}
+   
       {/*   Render base component here */}
-    </Provider>
+    </Provider> 
 
 
   </React.StrictMode>
